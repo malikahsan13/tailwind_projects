@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container shadow-md px-4"></div>
+        <nav class="bg-amber-500">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <div class="">
+                    <h2 class="font-bold text-2xl">MyApp</h2>
+                </div>
+                <ul class="hidden md:flex flex gap-4 p-2">
+                    <li class="bg-amber-950 text-white p-2 rounded-lg hover:bg-amber-800"><a href="#">Home</a></li>
+                    <li class="bg-amber-950 text-white p-2 rounded-lg hover:bg-amber-800"><a href="#">Gallery</a></li>
+                    <li class="bg-amber-950 text-white p-2 rounded-lg hover:bg-amber-800"><a href="#">Contact Us</a></li>
+                    <li class="bg-amber-950 text-white p-2 rounded-lg hover:bg-amber-800"><a href="#">About Us</a></li>
+                </ul>
+                <button id="menu-btn" class="md:hidden">&#9776;</button>
+            </div>
+
+            <div id="mobile-menu" class="sm:block md:hidden">
+                <ul class="md:flex flex-col gap-4 p-2">
+                    <li class="bg-amber-950 text-white p-2 rounded-lg hover:bg-amber-800"><a href="#">Home</a></li>
+                    <li class="bg-amber-950 text-white p-2 rounded-lg hover:bg-amber-800"><a href="#">Gallery</a></li>
+                    <li class="bg-amber-950 text-white p-2 rounded-lg hover:bg-amber-800"><a href="#">Contact Us</a></li>
+                    <li class="bg-amber-950 text-white p-2 rounded-lg hover:bg-amber-800"><a href="#">About Us</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileNew = document.getElementById("mobile-menu");
+        menuBtn.addEventListener('click',() => {
+            mobileNew.classList.toggle('hidden');
+        })
+    </script>
+</body>
+</html>
